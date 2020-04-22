@@ -8,23 +8,6 @@ Created on Tue Feb 25 16:54:17 2020
 
 import numpy as np
 
-"""
-# 초기 셋팅 단계 : mean, std, pi값 초기화 함
-    ex) k : 3, gaussian : 3
-    전제
-    ㅇ 데이터 분포가 0~1이라 함
-    ㅇ k : 가우시안 분포 개수
-    ㅇ limit_num = iter 최대 횟수
-    ㅇ round_num : mean, covariance, pi의 반올림 자리 
-        -> default : 1e-05    
-    
-    실제
-    ㅇ mean : 0에서 1을 백분위로 나누어 25, 50, 75에 해당하는 값을 mean으로 함.
-    ㅇ std : 각각 2~6사이의 float 랜덤값을 가지며 공분산은 두 개 값을 더하고 4로 나눈 값임.
-    ㅇ pi : 3개이므로 1/3 = 33%씩 3개.
-"""
-
-
 def gaussian_prob(x_arr_, mean_arr_, sigma_arr_):
     dim_ = x_arr_.shape[1]
     x_u_ = x_arr_-mean_arr_
